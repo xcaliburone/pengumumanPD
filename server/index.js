@@ -29,12 +29,12 @@ db.connect((err) => { if (err) throw err; console.log('Connected to MySQL databa
 // }); db.connect((err) => { if (err) throw err; console.log('Connected to MySQL database'); });
 
 // Endpoint untuk API
-app.get('/api/data', (req, res) => {
-    const data = {
-        message: 'Ini adalah data contoh dari server!'
-    };
-    res.json(data);
-});
+// app.get('/api/data', (req, res) => {
+//     const data = {
+//         message: 'Ini adalah data contoh dari server!'
+//     };
+//     res.json(data);
+// });
 
 app.get('/', (req, res) => {
     return res.redirect('/App')
