@@ -7,7 +7,8 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'https://pengumuman-peserta-didik.vercel.app',
+    // origin: 'https://pengumuman-peserta-didik.vercel.app',
+    origin: 'https://pengumumanpd-production.up.railway.app',
     methods: ['GET', 'POST'],
     credentials: true
 }));
