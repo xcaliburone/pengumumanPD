@@ -8,7 +8,13 @@ const path = require('path');
 // middleware
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["pengumuman-pd.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.use(express.static(path.join(__dirname, '../client/public')));
 
@@ -37,13 +43,13 @@ db.connect((err) => { if (err) throw err; console.log('Connected to MySQL databa
 // });
 
 // Middleware untuk menambahkan header CORS
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://pengumuman-peserta-didik.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-})
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', 'https://pengumuman-peserta-didik.vercel.app');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+//     res.setHeader('Access-Control-Allow-Credentials', true);
+//     next();
+// })
 
 app.get('/', (req, res) => {
     return res.redirect('/App')
