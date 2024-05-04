@@ -10,9 +10,9 @@ function App() {
         e.preventDefault();
         try {
             const response = await fetch(`http://localhost:8080/siswa/${encodeURIComponent(nomorUjian)}`);
-            // if (!response.ok) {
-            //     throw new Error('Nomor ujian tidak ditemukan');
-            // }
+            if (!response.ok) {
+                throw new Error('Nomor ujian tidak ditemukan');
+            }
             const data = await response.json();
             setSiswa(data[0]);
             setShowResults(true);
