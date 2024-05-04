@@ -4,7 +4,7 @@ function App() {
     const [nomorUjian, setNomorUjian] = useState("");
     const [siswa, setSiswa] = useState(null);
     const [error, setError] = useState(null);
-    const [showResults, setShowResults] = useState(false); // Menambahkan state untuk menampilkan hasil
+    const [showResults, setShowResults] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,7 +15,7 @@ function App() {
             // }
             const data = await response.json();
             setSiswa(data[0]);
-            setShowResults(true); // Menampilkan hasil ketika data siswa ditemukan
+            setShowResults(true);
         } catch (error) {
             setError(error.message);
         }

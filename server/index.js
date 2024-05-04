@@ -9,19 +9,22 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Serve static files from the client/public directory
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 const db = mysql.createConnection({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
+    port: process.env.MYSQL_PORT,
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE
 }); db.connect((err) => { if (err) throw err; console.log('Connected to MySQL database'); });
 
 // Endpoint untuk API
 app.get('/api/data', (req, res) => {
-    // Logika untuk mengirim data dari server ke klien
+    const data = {
+        message: 'Ini adalah data contoh dari server!'
+    };
+    res.json(data);
 });
 
 app.get('/', (req, res) => {
@@ -53,7 +56,6 @@ app.get('/cek-siswa/:nomorUjian', (req, res) => {
         const siswa = data[0];
         const { keterangan } = siswa;
 
-        // Lakukan pengecekan keterangan
         if (keterangan === 'LULUS') {
             return res.redirect('/PageLulus');
         } else if (keterangan === 'lulus dengan catatan') {
