@@ -8,13 +8,20 @@ const path = require('path');
 // middleware
 const app = express();
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ["pengumuman-pd.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+// app.use(cors(
+//     {
+//         origin: ["pengumuman-pd.vercel.app"],
+//         methods: ["POST", "GET"],
+//         credentials: true
+//     }
+// ));
+
+app.use(cors({
+    origin: ['https://pengumuman-peserta-didik.vercel.app'],
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
+
 
 app.use(express.static(path.join(__dirname, '../client/public')));
 
@@ -48,7 +55,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+    next(); 
 })
 
 app.get('/', (req, res) => {
