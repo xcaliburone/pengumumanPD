@@ -14,7 +14,6 @@ function App() {
             // eslint-disable-next-line no-undef
             const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
-
             // const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/siswa/${encodeURIComponent(nomorUjian)}`);
             const response = await fetch(`${backendUrl}/siswa/${encodeURIComponent(nomorUjian)}`);
             if (!response.ok) {
