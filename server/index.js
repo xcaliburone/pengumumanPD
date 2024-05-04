@@ -13,11 +13,11 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "sman22gowa"
-})
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
+}); db.connect((err) => { if (err) throw err; console.log('Connected to MySQL database'); });
 
 // Endpoint untuk API
 app.get('/api/data', (req, res) => {
@@ -49,7 +49,7 @@ app.get('/cek-siswa/:nomorUjian', (req, res) => {
         if (data.length === 0) {
             return res.send("Nomor ujian tidak ditemukan");
         }
-
+    
         const siswa = data[0];
         const { keterangan } = siswa;
 

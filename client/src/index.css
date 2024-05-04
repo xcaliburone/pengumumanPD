@@ -1,114 +1,229 @@
-#root {
-  width: 100%;
-  height: 100%;
-  /* background-color: yellowgreen; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  background-color: bisque;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: url("/bg3.png");
+    /* background-color: #5e5252; */
+    background-position: center; /* posisi di tengah atas */
+    background-size: cover; /* gambar mengisi seluruh area */
+    background-attachment: fixed; /* gambar tetap di tempat */
+    /* background-color: rgba(0, 0, 0, 0.5); Warna hitam semi-transparan */
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; /* Membuat efek blend mode terlihat lebih baik */
+    /* mix-blend-mode: multiply; Blend mode untuk membuat gambar menjadi gelap */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam semi-transparan */
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 form {
-  /* background-color: azure; */
-  padding: 25px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background-color: rgb(38, 38, 38);
+    /* background-color: azure; */
+    padding: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: rgb(38, 38, 38);
     /* background-color: red; */
     justify-content: center;
+    /* align-items: center; */
     width: 100%;
     height: 150px;
     gap: 10px;
 }
 
+form button {
+    margin-top: 25px;
+}
+
 label {
-  display: block;
-  font-size: 20px;
-  line-height: 20px;
-  color: rgb(64, 64, 64);
-  /* margin-bottom: 8px; */
-  color: white;
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(64, 64, 64);
+    /* margin-bottom: 8px; */
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 input {
-  width: 100%;
-  border: none;
-  outline: none;    
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 input:focus {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 .input {
-  border-radius: 6px;
-  width: 100%;
-  padding: 12px 15px;
-  border-width: 2px;
-  /* border-color: rgb(212, 212, 212); */
-  margin-bottom: 2px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 12px 15px;
+    border-width: 2px;
+    /* border-color: rgb(212, 212, 212); */
+    margin-bottom: 2px;
+}
+
+.loginForm {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: ce;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    /* background-color: antiquewhite; */
+}
+
+.header h1  {
+    color: aliceblue;
+}
+
+.header img.logoProv {
+    width: 130px;
+    margin-right: 25px;
+}
+
+.header img.logoSMA {
+    width: 180px;
+    margin-left: 25px;
 }
 
 .modals {
-  background-color: rgb(38, 38, 38);
-  border-radius: 8px;
-  padding: 24px 32px;
-  max-width: 448px;
-  margin-bottom: 20px;
-  width: 450px;
-  height: 200px;
+    background-color: rgb(38, 38, 38);
+    border-radius: 8px;
+    padding: 24px 32px;
+    /* max-width: 448px; */
+    margin-bottom: 20px;
+    /* width: 450px; */
+    width: 800px !important;
+    height: 250px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.titles {
-  font-size: 42px;
-  line-height: 32px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 16px;
-  color: white;
-  display: flex;
-  top: 0 !important;
-  color: #000;
+.bgCover {
+    background-color: aqua;
 }
 
-.tombols {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 8px 16px;
-  border-width: 1px;
-  border-color: transparent;
-  border-radius: 6px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  color: rgb(255, 255, 255);
-  background-color: rgb(5, 105, 105);
+.results {
+    background-color: rgb(38, 38, 38);
+    border-radius: 8px;
+    padding: 24px 32px;
+    /* max-width: 448px; */
+    margin-bottom: 20px;
+    /* width: 450px; */
+    width: 1200px !important;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.announc {
+    color: greenyellow;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.announc .hold {
+    color: red;
+    text-transform: uppercase;
+    font-size: 65px;
+}
+
+.data {
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
 .datas {
-  color: aliceblue;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.data-item {
+    background-color: rgb(38, 38, 38);
+    padding: 15px;
+    border-radius: 6px;
+    width: 360px;
+    box-shadow: 0px 0px 2px 2px  rgb(88, 88, 88) inset;
+}
+
+.titles {
+    font-size: 42px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: white;
+    display: flex;
+    top: 0 !important;
+    color: #000;
+    text-shadow: 3px 3px 15px black;
+}
+
+.tombols {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    word-spacing: 4px;
+    background-color: rgb(5, 105, 105);
+}
+
+.tombols:hover {
+    cursor: pointer;
+    background-color: rgb(16, 150, 150);
 }
