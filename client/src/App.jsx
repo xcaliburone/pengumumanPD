@@ -9,7 +9,8 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:8080/siswa/${encodeURIComponent(nomorUjian)}`);
+            // const response = await fetch(`http://localhost:8080/siswa/${encodeURIComponent(nomorUjian)}`);
+            const response = await fetch(`https://pengumuman-pd.vercel.app/siswa/${encodeURIComponent(nomorUjian)}`);
             if (!response.ok) {
                 throw new Error('Nomor ujian tidak ditemukan');
             }
