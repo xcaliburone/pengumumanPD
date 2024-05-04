@@ -37,8 +37,8 @@ app.get('/api/data', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    // return res.redirect('/App')
-    return res.send("WAKAKAKKAKAK")
+    return res.redirect('/App')
+    // return res.send("WAKAKAKKAKAK")
 })
 
 app.get('/siswa/:nomorUjian', (req, res) => {
