@@ -20,7 +20,8 @@ function App() {
             // const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/siswa/${encodeURIComponent(nomorUjian)}`);
             const response = await fetch(`${backendUrl}/siswa/${encodeURIComponent(nomorUjian)}`);
             if (!response.ok) {
-                throw new Error('Nomor ujian tidak ditemukan');
+                // throw new Error('Nomor ujian tidak ditemukan');
+                throw new Error('');
             }
             const data = await response.json();
             setSiswa(data[0]);

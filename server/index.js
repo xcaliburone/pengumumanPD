@@ -31,7 +31,8 @@ app.get('/siswa/:nomorUjian', (req, res) => {
     db.query(sql, (err, data) => {
         if (err) return res.json(err);
         if (data.length === 0) {
-            return res.send("Nomor ujian tidak ditemukan");
+            // return res.send("Nomor ujian tidak ditemukan");
+            return res.send("");
         }
         return res.json(data);
     });
@@ -43,7 +44,8 @@ app.get('/cek-siswa/:nomorUjian', (req, res) => {
     db.query(sql, (err, data) => {
         if (err) return res.json(err);
         if (data.length === 0) {
-            return res.send("Nomor ujian tidak ditemukan");
+            // return res.send("Nomor ujian tidak ditemukan");
+            return res.send("");
         }
     
         const siswa = data[0];
@@ -56,7 +58,8 @@ app.get('/cek-siswa/:nomorUjian', (req, res) => {
         } else if (keterangan === 'kelulusan ditunda') {
             return res.redirect('/PageLulusTunda');
         } else {
-            return res.send("Keterangan tidak valid");
+            // return res.send("Keterangan tidak valid");
+            return res.send("");
         }
     });
 });
