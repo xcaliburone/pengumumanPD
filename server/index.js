@@ -18,8 +18,12 @@ const urlDB = `mysql://root:qTcTfsbDSailPmAexJzbjpbVjFFqvMIv@monorail.proxy.rlwy
 const db = mysql.createConnection(urlDB);
 db.connect((err) => { if (err) throw err; console.log('Connected to MySQL database'); });
 
+// app.get('/', (req, res) => {
+//     return res.redirect('App');
+// });
+
 app.get('/', (req, res) => {
-    return res.redirect('App');
+    return res.redirect('/');
 });
 
 app.get('/siswa/:nomorUjian', (req, res) => {
