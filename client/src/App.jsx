@@ -27,6 +27,7 @@ function App() {
             setShowResults(true);
         } catch (error) {
             setError(error.message);
+            alert('Nomor Ujian tidak ditemukan');
         }
     };
 
@@ -49,7 +50,14 @@ function App() {
                             <label className="label" htmlFor="">Nomor Ujian :</label>
                             <input className="input" type="text" name="" id="" value={nomorUjian} onChange={handleChange} placeholder="Contoh: 12 - 34567 - 809" />
                             <button className="tombols" type="submit">Kirim</button>
-                            {error && <p className="error">{error}</p>}
+                            <div className="notes">
+                                <h3>Tata cara</h3>
+                                <ul>
+                                    <li>Masukkan Nomor Ujian dengan format xx - xxxxx - xxx</li>
+                                    <li>Perhatikan penggunaan spasi dan &ndash;</li>
+                                    <li>Tekan tombol Kirim untuk melihat hasil</li>
+                                </ul>
+                            </div>
                         </form>
                     </div>
                 </div>
