@@ -294,9 +294,29 @@ input:focus {
     
     .modals {
         max-width: 100%;
-        height: 250px;
+        height: 320px;
         margin-top: 140px;
         border-radius: 0;
+    }
+
+    .notes {
+        /* color: white; */
+        margin-top: 3px;
+        margin-left: 0px;
+        /* margin-top: 15px; */
+        /* margin-bottom: -20px; */
+        padding-top: 10px;
+        font-size: 9.5px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        letter-spacing: 0.3px;
+    }
+    
+    .notes ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
     
     .results {
