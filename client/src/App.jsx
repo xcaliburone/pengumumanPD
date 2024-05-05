@@ -43,7 +43,7 @@ function App() {
                     <div className="header">
                         {/* <div className="overlay"></div> */}
                         <img src="/prov.png" alt="LOGO PROVINSI SULSES" className="logoProv" />
-                        <h1 className="titles">PENGUMUMAN HASIL UJIAN AKHIR SEKOLAH</h1>
+                        <h1 className="titles">PENGUMUMAN KELULUSAN PESERTA DIDIK</h1>
                         <img src="/sman22gowa.ico" alt="LOGO SMAN 22 GOWA" className="logoSMA" />
                     </div>
                     <div className="modals">
