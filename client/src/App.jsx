@@ -65,7 +65,6 @@ function App() {
             )}
             {showResults && (
                 <div className="results">
-                    {error && <p>{error}</p>}
                     {siswa && (
                         <>
                             <div className="announc">
@@ -91,7 +90,7 @@ function App() {
                                     <p>NIS : {siswa.nis}</p>
                                 </div>
                                 <div className="data-item">
-                                    <p>NISN : {siswa.nisn}</p>
+                                    <p>NISN : 00{siswa.nisn}</p>
                                 </div>
                                 <div className="data-item">
                                     <p>Keterangan : {siswa.keterangan}</p>
@@ -99,6 +98,7 @@ function App() {
                             </div>
                         </>
                     )}
+                    {error && <p></p>}
                 </div>
             )}
         </>
