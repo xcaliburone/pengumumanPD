@@ -11,8 +11,10 @@ function App() {
         try {
             // const response = await fetch(`http://localhost:8080/siswa/${encodeURIComponent(nomorUjian)}`);
             // const response = await fetch(`https://pengumuman-pd.vercel.app/siswa/${encodeURIComponent(nomorUjian)}`);
+            // const backendUrl = process.env.REACT_APP_BACKEND_URL;
             // eslint-disable-next-line no-undef
-            const backendUrl = process.env.REACT_APP_BACKEND_URL;
+            const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://pengumumanpd-production.up.railway.app';
+
 
             // const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/siswa/${encodeURIComponent(nomorUjian)}`);
             const response = await fetch(`${backendUrl}/siswa/${encodeURIComponent(nomorUjian)}`);
