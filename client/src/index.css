@@ -329,11 +329,17 @@ input:focus {
     .announc {
         text-transform: uppercase;
         font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center
     }
     
     .announc .hold {
         text-transform: uppercase;
         font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .titles {
