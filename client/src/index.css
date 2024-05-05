@@ -227,3 +227,118 @@ input:focus {
     cursor: pointer;
     background-color: rgb(16, 150, 150);
 }
+
+/* Add a media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {    
+    label {
+        font-size: 17px;
+    }
+    
+    input {
+        font-size: 12px;
+    }
+    
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .header {
+        /* margin-top: 25px; */
+        margin-top: -100px;
+        padding-top: 20px;
+        /* background-color: rgba(0, 0, 0, .1); */
+        padding: 0 25px;
+        /* margin-bottom: 180px; */
+    }
+    
+    .header h1  {
+        /* margin-top: -100px; */
+        color: aliceblue;
+        font-size: 20px;
+    }
+    
+    .header img.logoProv {
+        width: 45px;
+        margin-right: 8px;
+    }
+    
+    .header img.logoSMA {
+        width: 60px;
+        margin-left: 8px;
+    }
+    
+    .modals {
+        background-color: rgb(38, 38, 38);
+        max-width: 100%;
+        height: 250px;
+        margin-top: 140px;
+    }
+    
+    .results {
+        background-color: rgb(38, 38, 38);
+        border-radius: 8px;
+        padding: 24px 32px;
+        /* max-width: 448px; */
+        margin-bottom: 20px;
+        /* width: 450px; */
+        /* width: 1200px !important; */
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+    }
+    
+    .announc {
+        /* color: greenyellow; */
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    
+    .announc .hold {
+        /* color: red; */
+        text-transform: uppercase;
+        font-size: 65px;
+    }
+    
+    .data {
+        color: white;
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+    
+    .datas {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .data-item {
+        background-color: rgb(38, 38, 38);
+        padding: 15px;
+        border-radius: 6px;
+        width: 360px;
+        box-shadow: 0px 0px 2px 2px  rgb(88, 88, 88) inset;
+    }
+    
+    .titles {
+        font-size: 21px;
+        line-height: 32px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 16px;
+        color: white;
+        display: flex;
+        top: 0 !important;
+        color: #000;
+        text-shadow: 3px 3px 15px black;
+    }    
+}
