@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function App() {
     const [nomorUjian, setNomorUjian] = useState("");
     const [siswa, setSiswa] = useState(null);
@@ -48,6 +49,7 @@ function App() {
                             <label className="label" htmlFor="">Nomor Ujian :</label>
                             <input className="input" type="text" name="" id="" value={nomorUjian} onChange={handleChange} placeholder="Contoh: 12 - 34567 - 809" />
                             <button className="tombols" type="submit">Kirim</button>
+                            {error && <p className="error">{error}</p>}
                         </form>
                     </div>
                 </div>

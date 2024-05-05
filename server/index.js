@@ -16,11 +16,10 @@ app.use(express.static(path.join(__dirname, '../client/public')));
 
 const urlDB = `mysql://root:qTcTfsbDSailPmAexJzbjpbVjFFqvMIv@monorail.proxy.rlwy.net:43679/railway`;
 const db = mysql.createConnection(urlDB);
-db.connect((err) => { if (err) throw err; console.log('Connected to MySQL database'); });
-
-// app.get('/', (req, res) => {
-//     return res.redirect('App');
-// });
+db.connect((err) => {
+    if (err) throw err;
+    console.log('Connected to MySQL database');
+});
 
 app.get('/', (req, res) => {
     return res.redirect('/');
